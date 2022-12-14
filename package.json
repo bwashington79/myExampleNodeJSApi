@@ -1,0 +1,27 @@
+{
+  "name": "myexamplenodejsapi",
+  "version": "1.0.0",
+  "description": "my example nodejs api",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwashington79/myExampleNodeJSApi.git"
+  },
+  "keywords": [
+    "api",
+    "nodejs"
+  ],
+  "author": "Bobby Washington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwashington79/myExampleNodeJSApi/issues"
+  },
+  "homepage": "https://github.com/bwashington79/myExampleNodeJSApi#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "joi": "^17.7.0"
+  }
+}
