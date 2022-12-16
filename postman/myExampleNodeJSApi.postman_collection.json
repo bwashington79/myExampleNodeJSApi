@@ -19,7 +19,21 @@
 							"\r",
 							"pm.test(\"GET /api/books JSON object returned\",() => {\r",
 							"    pm.expect(pm.response.json()).to.be.an(\"array\")\r",
-							"});"
+							"});\r",
+							"\r",
+							"\r",
+							"//demonstrate extracting value from response payload.\r",
+							"pm.test(\"GET /api/books JSON title attribute value is Harry Potter\", () => {\r",
+							"\r",
+							"    let jsonData = pm.response.json();\r",
+							"    console.log(\"value of json is \" + jsonData[0].title);\r",
+							"\r",
+							"    //demonstrate assertion\r",
+							"    pm.expect(jsonData[0].title).to.eql(\"Harry Potter\");\r",
+							"\r",
+							"});\r",
+							"\r",
+							""
 						],
 						"type": "text/javascript"
 					}
