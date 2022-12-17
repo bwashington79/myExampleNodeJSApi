@@ -10,14 +10,14 @@ Start nodejs api
     Note: This collection is located in ./postman
 
 
-4. Run test via command line
+4. Run Postman collection using Newman via command line
 
     1. Start api first 
 
         node script.js
 
     2. Run newman tests
-    
+
         npm test    
 
     
