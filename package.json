@@ -4,7 +4,7 @@
   "description": "my example nodejs api",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "newman run postman\\myExampleNodeJSApi.postman_collection.json"
   },
   "repository": {
     "type": "git",

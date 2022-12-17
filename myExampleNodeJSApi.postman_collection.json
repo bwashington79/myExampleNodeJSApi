@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "0227b403-d751-4150-aab3-8ccae8d63687",
+		"name": "myExampleNodeJSApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /api/books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"GET /api/books status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"GET /api/books JSON object returned\",() => {\r",
+							"    pm.expect(pm.response.json()).to.be.an(\"array\")\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//demonstrate extracting value from response payload.\r",
+							"pm.test(\"GET /api/books JSON title attribute value is Harry Potter\", () => {\r",
+							"\r",
+							"    let jsonData = pm.response.json();\r",
+							"    console.log(\"value of json is \" + jsonData[0].title);\r",
+							"\r",
+							"    //demonstrate assertion\r",
+							"    pm.expect(jsonData[0].title).to.eql(\"Harry Potter\");\r",
+							"\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
