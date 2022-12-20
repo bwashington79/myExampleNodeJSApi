@@ -4,7 +4,8 @@
   "description": "my example nodejs api",
   "main": "index.js",
   "scripts": {
-    "test": "newman run postman\\myExampleNodeJSApi.postman_collection.json"
+    "test": "newman run postman\\myExampleNodeJSApi.postman_collection.json",
+    "swagger:edit": "swagger project edit"
   },
   "repository": {
     "type": "git",
